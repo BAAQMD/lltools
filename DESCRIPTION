@@ -1,0 +1,17 @@
+Package: lltools
+Type: Package
+Title: Provides Leaflet Helpers for the Inventoryverse
+Version: 2019.12.06
+Author: David Holstius
+Maintainer: David Holstius <dholstius@baaqmd.gov>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+Depends:
+  geotools,
+  CARE,
+  leaflet,
+  leaflet.extras
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.0
