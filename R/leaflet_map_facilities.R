@@ -54,9 +54,10 @@ leaflet_map_facilities <- function (
   msg("popup formula is: ", popup)
 
   size_var <-
-    rlang::enquo(size)
+    rlang::ensym(size) %>%
+    rlang::as_label()
 
-  msg("size_var is: ", as.character(size_var))
+  msg("size_var is: ", size_var)
 
   #
   # Use non-standard evaluation to compute `sizes`
@@ -75,7 +76,7 @@ leaflet_map_facilities <- function (
       facility_geodata %>%
       drop_geometry() %>%
       mutate(
-        .size = !!size_var) %>%
+        .size = .[[size_var]]) %>%
       pull(
         .size)
 
