@@ -2,6 +2,7 @@
 
 export(addProviderLayers)
 export(addTileServerLayers)
+export(hideGroups)
 export(leaflet_map_SFBA)
 export(leaflet_map_facilities)
 export(setViewBayArea)
