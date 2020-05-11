@@ -75,16 +75,13 @@ leaflet_map_facilities <- function (
     circle_sizes <-
       facility_geodata %>%
       drop_geometry() %>%
-      mutate(
-        .size = .[[size_var]]) %>%
       pull(
-        .size)
+        size_var)
 
     circle_radii <-
       circle_sizes %>%
       scales::rescale_max() %>%
-      sqrt() %>%
-      { . * max_size }
+      { sqrt(.) * max_size }
 
     #
     # Add CircleMarkers, with *area* (not radius!) proportional to `size`
