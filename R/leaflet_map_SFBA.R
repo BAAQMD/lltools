@@ -4,6 +4,7 @@
 #' @param lng (numeric) longitude, in decimal degrees, center of map
 #' @param lat (numeric) latitude, in decimal degrees, for center of map
 #'
+#' @importFrom CARE CARE_region_geodata
 #'
 #' @examples
 #' leaflet_map_SFBA(zoom = 9)

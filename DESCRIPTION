@@ -8,12 +8,13 @@ Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
 Depends:
   geotools,
-  CARE,
   leaflet,
   leaflet.extras
+Imports:
+  CARE
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.0
+RoxygenNote: 7.1.0
 Suggests: 
     testthat (>= 2.1.0)
