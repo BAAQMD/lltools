@@ -1,7 +1,7 @@
 Package: lltools
 Type: Package
 Title: Provides Leaflet Helpers for the Inventoryverse
-Version: 2020.05.11
+Version: 2020.07.09
 Author: David Holstius
 Maintainer: David Holstius <dholstius@baaqmd.gov>
 Description: More about what it does (maybe more than one line)
