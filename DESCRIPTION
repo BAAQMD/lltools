@@ -33,6 +33,7 @@ Collate:
     'addCircleMarkersOverlay.R'
     'addCirclesOverlay.R'
     'addFilledPolygons.R'
+    'addGlPointOverlay.R'
     'addGlPolygonOverlay.R'
     'addMarkerOverlay.R'
     'addOverlayGroup.R'
