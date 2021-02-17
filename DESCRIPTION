@@ -1,7 +1,7 @@
 Package: lltools
 Type: Package
 Title: Provides Leaflet Helpers for the Inventoryverse
-Version: 2020.07.09
+Version: 2020.12.14
 Author: David Holstius
 Maintainer: David Holstius <dholstius@baaqmd.gov>
 Description: More about what it does (maybe more than one line)
@@ -15,6 +15,49 @@ Imports:
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
+Roxygen: list(markdown = TRUE)
 Suggests: 
-    testthat (>= 2.1.0)
+  htmlwidgets,
+  htmltools,
+  testthat (>= 2.1.0)
+Remotes:
+  github::BAAQMD/geotools,
+  github::BAAQMD/CARE
+VignetteBuilder: knitr
+Collate: 
+    'addOverlay.R'
+    'addAwesomeMarkerOverlay.R'
+    'addBaseGroup.R'
+    'addCARERegions.R'
+    'addCircleMarkersOverlay.R'
+    'addCirclesOverlay.R'
+    'addFilledPolygons.R'
+    'addGlPolygonOverlay.R'
+    'addMarkerOverlay.R'
+    'addOverlayGroup.R'
+    'addOverlays.R'
+    'addPolygonOverlay.R'
+    'addPolylineOverlay.R'
+    'addProviderLayers.R'
+    'addRasterLayer.R'
+    'addSFABRegion.R'
+    'addSolidPolygons.R'
+    'addTileServerLayers.R'
+    'addTileset.R'
+    'addTitle.R'
+    'defunct.R'
+    'getBaseGroups.R'
+    'getOverlayGroups.R'
+    'hideGroups.R'
+    'leaflet_map_SFBA.R'
+    'leaflet_map_facilities.R'
+    'noZoomOption.R'
+    'resetLayersControl.R'
+    'setBaseGroups.R'
+    'setOverlayGroups.R'
+    'setViewBayArea.R'
+    'setViewBounds.R'
+    'showGroups.R'
+    'style_widget.R'
+    'write_leaflet.R'
