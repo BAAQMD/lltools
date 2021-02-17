@@ -13,6 +13,8 @@
 #' But you may need to pass other arguments, like `width` and `height`.
 #' Also, `remove_url` is `TRUE` by default (but you can change that).
 #'
+#' @importFrom mapview mapshot
+#'
 #' @export
 write_leaflet <- function (leaflet_map, file = NULL, ..., remove_url = TRUE, verbose = getOption("verbose")) {
   msg <- function (...) if(isTRUE(verbose)) message("[write_leaflet] ", ...)
@@ -23,10 +25,12 @@ write_leaflet <- function (leaflet_map, file = NULL, ..., remove_url = TRUE, ver
   on.exit(setwd(old_wd))
 
   if (str_to_lower(tools::file_ext(file)) == "html") {
-    mapshot(leaflet_map, url = basename(file), ...)
+    mapview::mapshot(leaflet_map, url = basename(file), ...)
   } else {
-    mapshot(leaflet_map, file = basename(file), remove_url = remove_url, ...)
+    mapview::mapshot(leaflet_map, file = basename(file), remove_url = remove_url, ...)
   }
+
+  return(leaflet_map)
 
 }
 

@@ -13,13 +13,13 @@ write_leaflet(
 )
 }
 \arguments{
-\item{leaflet_map}{(object) created with [leaflet::leaflet()], [leaflet_SFBA()], etc.}
+\item{leaflet_map}{(object) created with \code{\link[leaflet:leaflet]{leaflet::leaflet()}}, \code{\link[=leaflet_SFBA]{leaflet_SFBA()}}, etc.}
 
-\item{file}{(character) ending in `.html` (but see Details)}
+\item{file}{(character) ending in \code{.html} (but see Details)}
 
-\item{...}{further arguments to [mapview::mapshot()]}
+\item{...}{further arguments to \code{\link[mapview:mapshot]{mapview::mapshot()}}}
 
-\item{remove_url}{(logical) passed to [mapview::mapshot()] if `file` doesn't end with `.html`}
+\item{remove_url}{(logical) passed to \code{\link[mapview:mapshot]{mapview::mapshot()}} if \code{file} doesn't end with \code{.html}}
 
 \item{verbose}{(logical)}
 }
@@ -27,9 +27,9 @@ write_leaflet(
 Write a leaflet map to disk
 }
 \details{
-This function relies on [mapview::mapshot()].
-If `file` ends with an extensions other than `.html` ---
-for example, `.png` --- then `mapshot()` will try to handle it.
-But you may need to pass other arguments, like `width` and `height`.
-Also, `remove_url` is `TRUE` by default (but you can change that).
+This function relies on \code{\link[mapview:mapshot]{mapview::mapshot()}}.
+If \code{file} ends with an extensions other than \code{.html} ---
+for example, \code{.png} --- then \code{mapshot()} will try to handle it.
+But you may need to pass other arguments, like \code{width} and \code{height}.
+Also, \code{remove_url} is \code{TRUE} by default (but you can change that).
 }
