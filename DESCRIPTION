@@ -25,7 +25,6 @@ Suggests:
 Remotes:
   github::BAAQMD/geotools,
   github::BAAQMD/CARE
-  
 VignetteBuilder: knitr
 Collate: 
     'addOverlay.R'
