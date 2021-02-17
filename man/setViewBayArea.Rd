@@ -24,7 +24,7 @@ setViewSFBA(
 )
 }
 \arguments{
-\item{leaflet_map}{created with `leaflet()` or `leaflet_SFBA()`}
+\item{leaflet_map}{created with \code{leaflet()} or \code{leaflet_SFBA()}}
 }
 \description{
 Recenter and zoom map to fit SF Bay Area
@@ -38,5 +38,5 @@ Recenter and zoom map to fit SF Bay Area
 just an alias
 }
 \seealso{
-[leaflet_SFBA()]
+\code{\link[=leaflet_SFBA]{leaflet_SFBA()}}
 }

@@ -21,16 +21,19 @@ setMethod("setViewBounds", c("leaflet", "list"), function (map, obj, ...){
 #' @rdname setViewBounds-methods
 #' @aliases setViewBounds,leaflet,sfc-method
 setMethod("setViewBounds", c("leaflet", "sfc"), function (map, obj, ...) {
-  setViewBounds(map, as.list(sf::st_bbox(obj)), ...)
+  bb <- sf::st_bbox(sf::st_transform(obj, WGS84_GPS))
+  setViewBounds(map, as.list(bb), ...)
 })
 
 #' @rdname setViewBounds-methods
 #' @aliases setViewBounds,leaflet,sf-method
 setMethod("setViewBounds", c("leaflet", "sf"), function (map, obj, ...) {
-  setViewBounds(map, as.list(sf::st_bbox(obj)), ...)
+  bb <- sf::st_bbox(sf::st_transform(obj, WGS84_GPS))
+  setViewBounds(map, as.list(bb), ...)
 })
 
 #' @rdname setViewBounds-methods
 setMethod("setViewBounds", c("leaflet", "Spatial"), function (map, obj, ...) {
-  setViewBounds(map, as.list(sp::bbox(obj)), ...)
+  bb <- sp::bbox(sp::spTransform(obj, st_crs(WGS84_GPS)$proj4string))
+  setViewBounds(map, as.list(bb), ...)
 })

@@ -22,7 +22,7 @@ setViewBounds(map, obj, ...)
 \arguments{
 \item{map}{leaflet map object}
 
-\item{obj}{`sf` or `Spatial` object, or a named list or vector}
+\item{obj}{\code{sf} or \code{Spatial} object, or a named list or vector}
 }
 \description{
 Based on the bounding box of an object you supply.
