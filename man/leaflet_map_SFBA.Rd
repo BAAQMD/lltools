@@ -7,21 +7,33 @@
 leaflet_map_SFBA(
   data,
   tileset,
+  tileset_providers = list(Light =
+    "https://cartodb-basemaps-a.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png", Dark =
+    "https://cartodb-basemaps-a.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+    Unlabeled =
+    "https://cartodb-basemaps-a.global.ssl.fastly.net/light_nolabels/{z}/{x}/{y}.png",
+    Satellite = "http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}", Terrain =
+    "http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}", Topo =
+    "https://a.tile.opentopomap.org/{z}/{x}/{y}.png", Roads =
+    "http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}",      Census =
+    "http://demographics.virginia.edu/DotMap/tiles4/{z}/{x}/{y}.png", Toner =
+    "http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png", Blank = ""),
   ...,
   lng = NULL,
   lat = NULL,
   zoom = NULL,
   max_zoom = NULL,
   options = NULL,
+  layer_visibility = list(SFAB = TRUE),
   layer_controls = TRUE,
-  tileset_providers = NULL,
-  tile_options = tileOptions(opacity = 1),
   attribution = NULL,
+  background = "white",
+  crs = 4326,
   verbose = getOption("verbose")
 )
 }
 \arguments{
-\item{...}{arguments to [leaflet::leaflet()]}
+\item{...}{arguments to \code{\link[leaflet:leaflet]{leaflet::leaflet()}}}
 
 \item{lng}{(numeric) longitude, in decimal degrees, center of map}
 
@@ -36,5 +48,5 @@ leaflet_map_SFBA(zoom = 9, layer_controls = FALSE)
 
 }
 \seealso{
-[leaflet_map_facilities()]
+\code{\link[=leaflet_map_facilities]{leaflet_map_facilities()}}
 }

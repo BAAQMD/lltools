@@ -18,7 +18,7 @@ leaflet_map_facilities(
 )
 }
 \arguments{
-\item{facility_geodata}{(geodata) for example: `point_source_facilities(RY(2015))`}
+\item{facility_geodata}{(geodata) for example: \code{point_source_facilities(RY(2015))}}
 
 \item{size}{(expression) if supplied, controls size of circles (area, not radius, will be proportional to this)}
 
@@ -26,9 +26,9 @@ leaflet_map_facilities(
 
 \item{max_size}{(numeric) helpful for tweaking the relative sizes of circles}
 
-\item{stroke}{(logical) see [leaflet::addCircleMarkers()]}
+\item{stroke}{(logical) see \code{\link[leaflet:map-layers]{leaflet::addCircleMarkers()}}}
 
-\item{...}{further arguments to [leaflet_SFBA()]}
+\item{...}{further arguments to \code{\link[=leaflet_SFBA]{leaflet_SFBA()}}}
 
 \item{verbose}{(logical)}
 }
@@ -36,5 +36,5 @@ leaflet_map_facilities(
 Map facility-specific locations (as pins), or quantities (as circles)
 }
 \seealso{
-[leaflet_map_SFBA()]
+\code{\link[=leaflet_map_SFBA]{leaflet_map_SFBA()}}
 }
