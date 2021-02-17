@@ -11,7 +11,8 @@ Depends:
   leaflet,
   leaflet.extras
 Imports:
-  CARE
+  CARE,
+  leafgl
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
@@ -24,6 +25,7 @@ Suggests:
 Remotes:
   github::BAAQMD/geotools,
   github::BAAQMD/CARE
+  
 VignetteBuilder: knitr
 Collate: 
     'addOverlay.R'
