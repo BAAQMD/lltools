@@ -1,7 +1,7 @@
 Package: lltools
 Type: Package
 Title: Provides Leaflet Helpers for the Inventoryverse
-Version: 2020.12.14
+Version: 2021.04.19
 Author: David Holstius
 Maintainer: David Holstius <dholstius@baaqmd.gov>
 Description: More about what it does (maybe more than one line)
@@ -12,7 +12,14 @@ Depends:
   leaflet.extras
 Imports:
   CARE,
-  leafgl
+  leafgl,
+  colourvalues,
+  dplyr,
+  funtools,
+  leafpop,
+  mapview,
+  purrr,
+  sf
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
@@ -21,7 +28,8 @@ Roxygen: list(markdown = TRUE)
 Suggests: 
   htmlwidgets,
   htmltools,
-  testthat (>= 2.1.0)
+  testthat (>= 2.1.0),
+  knitr
 Remotes:
   github::BAAQMD/geotools,
   github::BAAQMD/CARE
