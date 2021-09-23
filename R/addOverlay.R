@@ -51,8 +51,29 @@ addOverlay <- function (
     ...)
 
   if ("color" %in% names(rlang::fn_fmls(fun))) {
-    if (color %in% names(CMYK_COLORS)) {
-      color <- CMYK_COLORS[[color]]
+    if (is.null(color)) {
+      color <- NA
+    } else if (is.character(color)) {
+      if (isTRUE(all(color %in% names(CMYK_COLORS)))) {
+        msg("interpreting color as CMYK name(s)")
+        color <- CMYK_COLORS[color]
+      } else {
+        msg("taking color as-is: ", str_csv(head(color, 3), "..."))
+        color <- color
+      }
+    } else if (rlang::is_formula(color)) {
+      msg("evaluating colors: ", color)
+      color <- funtools::eval_f(color, data = data)
+      if (is.numeric(color)) {
+        msg("converting color to RGB matrix")
+        color <- colourvalues::colour_values_rgb(
+          color,
+          palette = palette,
+          include_alpha = FALSE) / 255
+      }
+    } else {
+      err_msg <- "Sorry, I don't know how to interpret that expression for `color` as a basis for colors."
+      stop(err_msg)
     }
     arg_list <- append(arg_list, list(color = color))
   } else {
