@@ -23,7 +23,7 @@ addOverlay <- function (
   weight = 1.0,
   opacity = 1.0,
   ...,
-  verbose = TRUE
+  verbose = getOption("verbose", default = FALSE)
 ) {
 
   msg <- function (...) if(isTRUE(verbose)) message("[addOverlay] ", ...)
