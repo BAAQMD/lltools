@@ -63,6 +63,7 @@ Collate:
     'leaflet_map_SFBA.R'
     'leaflet_map_facilities.R'
     'noZoomOption.R'
+    'palette_impact.R'
     'resetLayersControl.R'
     'setBaseGroups.R'
     'setOverlayGroups.R'
