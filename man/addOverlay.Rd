@@ -24,7 +24,7 @@ addOverlay(
   weight = 1,
   opacity = 1,
   ...,
-  verbose = TRUE
+  verbose = getOption("verbose", default = FALSE)
 )
 
 addAwesomeMarkerOverlay(...)
@@ -55,9 +55,6 @@ addPolylineOverlay(map_object, ..., color = "black", weight = 2, opacity = 1)
 \item{...}{passed to \code{fun}}
 
 \item{verbose}{display messages}
-}
-\value{
-
 }
 \description{
 addOverlay

@@ -14,9 +14,6 @@ resetLayersControl(
 \arguments{
 \item{...}{}
 }
-\value{
-
-}
 \description{
 resetLayersControl
 }

@@ -15,7 +15,8 @@ leaflet_map_SFBA(
     Satellite = "http://mt0.google.com/vt/lyrs=s&hl=en&x={x}&y={y}&z={z}", Terrain =
     "http://mt0.google.com/vt/lyrs=p&hl=en&x={x}&y={y}&z={z}", Topo =
     "https://a.tile.opentopomap.org/{z}/{x}/{y}.png", Roads =
-    "http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}",      Census =
+    "http://mt0.google.com/vt/lyrs=r&hl=en&x={x}&y={y}&z={z}", 
+     Census =
     "http://demographics.virginia.edu/DotMap/tiles4/{z}/{x}/{y}.png", Toner =
     "http://stamen-tiles-a.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png", Blank = ""),
   ...,

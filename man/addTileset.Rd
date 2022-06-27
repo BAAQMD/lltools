@@ -19,9 +19,6 @@ addTileset(
 \arguments{
 \item{verbose}{}
 }
-\value{
-
-}
 \description{
 addTileset
 }
